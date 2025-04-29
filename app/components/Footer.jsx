@@ -33,7 +33,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://www.linkedin.com/in/alexander-husseini" 
+                href="https://www.linkedin.com/in/alexander-husseini-547a10314/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
@@ -42,7 +42,7 @@ export default function Footer() {
                 <LinkedInIcon />
               </a>
               <a 
-                href="https://github.com/alexander-husseini" 
+                href="https://github.com/AlexHusseini" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
@@ -51,7 +51,7 @@ export default function Footer() {
                 <GitHubIcon />
               </a>
               <a 
-                href="mailto:contact@alexander-husseini.com"
+                href="mailto:alexander.husseini@gmail.com"
                 className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
                 aria-label="Email Contact"
               >
@@ -82,10 +82,10 @@ export default function Footer() {
               Feel free to reach out for collaborations or just a friendly hello!
             </p>
             <a 
-              href="mailto:contact@alexander-husseini.com" 
+              href="mailto:alexander.husseini@gmail.com" 
               className="text-blue-600 dark:text-blue-400 hover:underline"
             >
-              contact@alexander-husseini.com
+              alexander.husseini@gmail.com
             </a>
             
             <div className="mt-4">

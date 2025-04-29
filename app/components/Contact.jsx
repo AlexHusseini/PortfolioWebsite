@@ -104,17 +104,17 @@ export default function Contact() {
               
               <div className="space-y-4">
                 <a 
-                  href="mailto:contact@alexander-husseini.com" 
+                  href="mailto:alexander.husseini@gmail.com" 
                   className="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400">
                     <EmailIcon />
                   </div>
-                  <span>contact@alexander-husseini.com</span>
+                  <span>alexander.husseini@gmail.com</span>
                 </a>
                 
                 <a 
-                  href="https://www.linkedin.com/in/alexander-husseini"
+                  href="https://www.linkedin.com/in/alexander-husseini-547a10314/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -122,11 +122,11 @@ export default function Contact() {
                   <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400">
                     <LinkedInIcon />
                   </div>
-                  <span>linkedin.com/in/alexander-husseini</span>
+                  <span>linkedin.com/in/alexander-husseini-547a10314</span>
                 </a>
                 
                 <a 
-                  href="https://github.com/alexander-husseini"
+                  href="https://github.com/AlexHusseini"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -134,7 +134,7 @@ export default function Contact() {
                   <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400">
                     <GitHubIcon />
                   </div>
-                  <span>github.com/alexander-husseini</span>
+                  <span>github.com/AlexHusseini</span>
                 </a>
               </div>
             </motion.div>

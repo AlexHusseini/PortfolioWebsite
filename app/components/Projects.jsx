@@ -12,7 +12,7 @@ const projects = [
     description: 'A full-stack e-commerce application with user authentication, product management, shopping cart, and payment processing using Stripe.',
     image: '/images/project-ecommerce.jpg',
     tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe API'],
-    githubUrl: 'https://github.com/alexander-husseini/ecommerce-platform',
+    githubUrl: 'https://github.com/AlexHusseini/ecommerce-platform',
     liveUrl: 'https://ecommerce-platform-demo.com',
   },
   {
@@ -21,7 +21,7 @@ const projects = [
     description: 'A responsive task management application with drag-and-drop interface, real-time updates, and team collaboration features.',
     image: '/images/project-task-manager.jpg',
     tags: ['React', 'Firebase', 'Redux', 'Material UI', 'React DnD'],
-    githubUrl: 'https://github.com/alexander-husseini/task-management',
+    githubUrl: 'https://github.com/AlexHusseini/task-management',
     liveUrl: 'https://task-manager-demo.com',
   },
   {
@@ -30,7 +30,7 @@ const projects = [
     description: 'A property listing platform with search filters, interactive maps, and virtual tour capabilities for real estate agents and buyers.',
     image: '/images/project-realestate.jpg',
     tags: ['Next.js', 'Tailwind CSS', 'MongoDB', 'Google Maps API', 'AWS S3'],
-    githubUrl: 'https://github.com/alexander-husseini/realestate-app',
+    githubUrl: 'https://github.com/AlexHusseini/realestate-app',
     liveUrl: 'https://realestate-demo.com',
   },
 ];
@@ -134,7 +134,7 @@ export default function Projects() {
         
         <div className="text-center mt-12">
           <a 
-            href="https://github.com/alexander-husseini" 
+            href="https://github.com/AlexHusseini" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="button button-secondary inline-flex items-center gap-2"
