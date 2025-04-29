@@ -2,29 +2,49 @@
 
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const skills = {
   frontend: [
-    { name: 'React', level: 95 },
-    { name: 'JavaScript / TypeScript', level: 90 },
-    { name: 'HTML / CSS', level: 95 },
-    { name: 'Next.js', level: 85 },
-    { name: 'Tailwind CSS', level: 90 },
+    'React',
+    'JavaScript / TypeScript',
+    'HTML / CSS',
+    'Next.js',
+    'Tailwind CSS',
+    'Redux',
+    'SASS/SCSS',
+    'Responsive Design',
+    'UI/UX',
+    'Material UI',
+    'Bootstrap'
   ],
   backend: [
-    { name: 'Node.js', level: 80 },
-    { name: 'Express', level: 85 },
-    { name: 'MongoDB', level: 75 },
-    { name: 'RESTful APIs', level: 90 },
-    { name: 'Firebase', level: 80 },
+    'Python',
+    'Java',
+    'C#',
+    'Node.js',
+    'Express',
+    'MongoDB',
+    'RESTful APIs',
+    'Firebase',
+    'GraphQL',
+    'SQL Databases',
+    'Authentication & Authorization',
+    'API Development'
   ],
   tools: [
-    { name: 'Git / GitHub', level: 90 },
-    { name: 'Webpack / Vite', level: 80 },
-    { name: 'Jest / Testing Library', level: 80 },
-    { name: 'CI/CD', level: 75 },
-    { name: 'Docker', level: 70 },
+    'Git / GitHub',
+    'Webpack / Vite',
+    'Jest / Testing Library',
+    'CI/CD',
+    'Docker',
+    'AWS',
+    'Agile/Scrum',
+    'Figma',
+    'Performance Optimization',
+    'Cross-browser Compatibility',
+    'Accessibility',
+    'SEO'
   ],
 };
 
@@ -35,17 +55,6 @@ export default function Skills() {
     threshold: 0.1,
     triggerOnce: true,
   });
-  
-  const [showProgress, setShowProgress] = useState(false);
-  
-  useEffect(() => {
-    if (inView) {
-      const timer = setTimeout(() => {
-        setShowProgress(true);
-      }, 400);
-      return () => clearTimeout(timer);
-    }
-  }, [inView]);
 
   const tabs = [
     { id: 'frontend', label: 'Frontend' },
@@ -100,55 +109,23 @@ export default function Skills() {
             ))}
           </div>
           
-          {/* Skills Progress Bars */}
+          {/* Skills List */}
           <motion.div
             variants={staggerVariants}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
-            className="space-y-8"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6"
           >
-            {skills[activeTab].map((skill, index) => (
-              <motion.div key={skill.name} variants={itemVariants}>
-                <div className="flex justify-between mb-2">
-                  <span className="font-medium text-gray-800 dark:text-gray-200">{skill.name}</span>
-                  <span className="text-gray-600 dark:text-gray-400">{skill.level}%</span>
-                </div>
-                <div className="progress-bar">
-                  <div 
-                    className="progress-bar-fill"
-                    style={{ 
-                      width: showProgress ? `${skill.level}%` : '0%',
-                    }}
-                  ></div>
-                </div>
+            {skills[activeTab].map((skill) => (
+              <motion.div 
+                key={skill} 
+                variants={itemVariants}
+                className="flex items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm"
+              >
+                <div className="h-2 w-2 bg-blue-500 dark:bg-blue-400 rounded-full mr-3"></div>
+                <span className="text-gray-800 dark:text-gray-200 font-medium">{skill}</span>
               </motion.div>
             ))}
-          </motion.div>
-          
-          {/* Additional Skills */}
-          <motion.div
-            variants={itemVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            transition={{ delay: 0.6 }}
-            className="mt-16"
-          >
-            <h3 className="text-xl font-bold mb-6 text-center text-gray-800 dark:text-gray-200">Additional Skills</h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {[
-                'Redux', 'SASS/SCSS', 'GraphQL', 'AWS', 'Responsive Design', 
-                'UI/UX', 'Agile/Scrum', 'Figma', 'Material UI', 'Bootstrap',
-                'SEO', 'Performance Optimization', 'Cross-browser Compatibility',
-                'Accessibility'
-              ].map((skill) => (
-                <span 
-                  key={skill} 
-                  className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
           </motion.div>
         </div>
       </div>
