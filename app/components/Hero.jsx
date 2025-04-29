@@ -37,7 +37,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mb-8"
         >
-          I build modern, responsive web applications with a focus on clean code, great user experience, and scalability. Let's create something amazing together.
+          Software Engineering major at Kennesaw State University, Minor in cybersecurity
         </motion.p>
         
         <motion.div
@@ -83,7 +83,7 @@ export default function Hero() {
             <GitHubIcon fontSize="large" />
           </a>
           <a 
-            href="mailto:alexander.husseini@gmail.com"
+            href="mailto:alex@alexhusseini.com"
             className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
             aria-label="Email Contact"
           >

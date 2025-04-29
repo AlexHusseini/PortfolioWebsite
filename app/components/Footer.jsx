@@ -51,7 +51,7 @@ export default function Footer() {
                 <GitHubIcon />
               </a>
               <a 
-                href="mailto:alexander.husseini@gmail.com"
+                href="mailto:alex@alexhusseini.com"
                 className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
                 aria-label="Email Contact"
               >
@@ -82,10 +82,10 @@ export default function Footer() {
               Feel free to reach out for collaborations or just a friendly hello!
             </p>
             <a 
-              href="mailto:alexander.husseini@gmail.com" 
+              href="mailto:alex@alexhusseini.com" 
               className="text-blue-600 dark:text-blue-400 hover:underline"
             >
-              alexander.husseini@gmail.com
+              alex@alexhusseini.com
             </a>
             
             <div className="mt-4">
