@@ -17,8 +17,8 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-6">
-            <Link href="#home" className="text-xl font-bold text-blue-600 dark:text-blue-400">
-              Alexander<span className="text-indigo-600 dark:text-indigo-400">.dev</span>
+            <Link href="#home" className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
+              Alexander Husseini
             </Link>
             
             <div className="flex space-x-4">

@@ -2,18 +2,22 @@
 2:I[8667,["177","static/chunks/app/layout-8ccf4b77d7407411.js"],"default"]
 3:I[7555,[],""]
 4:I[1295,[],""]
-5:I[9665,[],"MetadataBoundary"]
-7:I[9665,[],"OutletBoundary"]
-a:I[4911,[],"AsyncMetadataOutlet"]
-c:I[9665,[],"ViewportBoundary"]
-e:I[6614,[],""]
-:HL["/_next/static/css/09af5282d5e5a0fb.css","style"]
-0:{"P":null,"b":"tg-_1rA01P7ZlAtgQEU2O","p":"","c":["","_not-found"],"i":false,"f":[[["",{"children":["/_not-found",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/09af5282d5e5a0fb.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__className_d65c78","children":["$","$L2",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]]}],{"children":["/_not-found",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:props:children:props:notFound:0:1:props:style","children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":"$0:f:0:1:1:props:children:1:props:children:props:children:props:children:props:notFound:0:1:props:children:props:children:1:props:style","children":404}],["$","div",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:props:children:props:notFound:0:1:props:children:props:children:2:props:style","children":["$","h2",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:props:children:props:notFound:0:1:props:children:props:children:2:props:children:props:style","children":"This page could not be found."}]}]]}]}]],["$","$L5",null,{"children":"$L6"}],null,["$","$L7",null,{"children":["$L8","$L9",["$","$La",null,{"promise":"$@b"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$1","hFaskKgsZXKYUeVA7GREv",{"children":[["$","$Lc",null,{"children":"$Ld"}],null]}],null]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
-f:"$Sreact.suspense"
-10:I[4911,[],"AsyncMetadata"]
-6:["$","$f",null,{"fallback":null,"children":["$","$L10",null,{"promise":"$@11"}]}]
-9:null
-d:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-8:null
-11:{"metadata":[["$","title","0",{"children":"Alexander Husseini | Portfolio"}],["$","meta","1",{"name":"description","content":"Professional portfolio showcasing projects, skills, and experience of Alexander Husseini"}]],"error":null,"digest":"$undefined"}
-b:{"metadata":"$11:metadata","error":null,"digest":"$undefined"}
+5:I[3754,["130","static/chunks/130-0a4219547aceff63.js","345","static/chunks/app/not-found-1c239e8f3c5d647c.js"],"default"]
+6:I[894,[],"ClientPageRoot"]
+9:I[9665,[],"MetadataBoundary"]
+b:I[9665,[],"OutletBoundary"]
+e:I[4911,[],"AsyncMetadataOutlet"]
+10:I[9665,[],"ViewportBoundary"]
+12:I[6614,[],""]
+:HL["/_next/static/css/d3005e285e0277db.css","style"]
+0:{"P":null,"b":"EIGZtcbl8IFl6Hz2sOr5R","p":"","c":["","_not-found"],"i":false,"f":[[["",{"children":["/_not-found",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d3005e285e0277db.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__className_d65c78","children":["$","$L2",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L5",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]]}],{"children":["/_not-found",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","$L6",null,{"Component":"$5","searchParams":{},"params":{},"promises":["$@7","$@8"]}],["$","$L9",null,{"children":"$La"}],null,["$","$Lb",null,{"children":["$Lc","$Ld",["$","$Le",null,{"promise":"$@f"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$1","YWiGeMXdDnRVglDVXKE_a",{"children":[["$","$L10",null,{"children":"$L11"}],null]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
+13:"$Sreact.suspense"
+14:I[4911,[],"AsyncMetadata"]
+7:{}
+8:{}
+a:["$","$13",null,{"fallback":null,"children":["$","$L14",null,{"promise":"$@15"}]}]
+d:null
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+15:{"metadata":[["$","title","0",{"children":"Alexander Husseini | Portfolio"}],["$","meta","1",{"name":"description","content":"Professional portfolio showcasing projects, skills, and experience of Alexander Husseini"}]],"error":null,"digest":"$undefined"}
+f:{"metadata":"$15:metadata","error":null,"digest":"$undefined"}
