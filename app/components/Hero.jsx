@@ -6,10 +6,12 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import DownloadIcon from '@mui/icons-material/Download';
+import AnimatedBackground from './AnimatedBackground';
 
 export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden section-padding pt-32">
+      <AnimatedBackground />
       <div className="container mx-auto px-4 z-10 flex flex-col items-center lg:items-start text-center lg:text-left">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
