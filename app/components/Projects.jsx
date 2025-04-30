@@ -97,15 +97,27 @@ export default function Projects() {
                   {project.period}
                 </span>
                 <div className="flex space-x-3">
-                  <a 
-                    href={project.githubUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
-                  >
-                    <GitHubIcon fontSize="small" />
-                    <span className="text-sm">Code</span>
-                  </a>
+                  {project.id === 1 ? (
+                    <a 
+                      href="#" 
+                      onClick={(e) => e.preventDefault()}
+                      className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+                    >
+                      <OpenInNewIcon fontSize="small" />
+                      <span className="text-sm">App Link</span>
+                      <span className="text-xs text-blue-600 dark:text-blue-400 ml-1">(Coming Soon)</span>
+                    </a>
+                  ) : (
+                    <a 
+                      href={project.githubUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+                    >
+                      <GitHubIcon fontSize="small" />
+                      <span className="text-sm">Code</span>
+                    </a>
+                  )}
                   {project.liveUrl && (
                     <a 
                       href={project.liveUrl} 
