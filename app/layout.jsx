@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
         <meta name="twitter:description" content="My Work Portfolio" />
         <meta name="twitter:image" content="/android-chrome-512x512.png" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} antialiased`}>
         <ThemeProvider>
           {children}
         </ThemeProvider>

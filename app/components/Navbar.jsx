@@ -4,17 +4,16 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useTheme } from './ThemeProvider';
 import { motion } from 'framer-motion';
+import ThemeToggle from './ThemeToggle';
 
 // Material UI Icons
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   const navLinks = [
     { name: 'Home', href: '#home' },
@@ -69,13 +68,7 @@ export default function Navbar() {
           ))}
           
           {/* Theme Toggle Button */}
-          <button 
-            onClick={toggleTheme}
-            className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 transition-colors hover:bg-gray-200 dark:hover:bg-gray-700"
-            aria-label="Toggle theme"
-          >
-            {theme === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
-          </button>
+          <ThemeToggle />
         </nav>
         
         {/* Mobile Menu Button */}
@@ -108,21 +101,9 @@ export default function Navbar() {
                 </Link>
               ))}
               
-              <button 
-                onClick={toggleTheme}
-                className="mt-8 p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 transition-colors hover:bg-gray-200 dark:hover:bg-gray-700 flex items-center"
-                aria-label="Toggle theme"
-              >
-                {theme === 'dark' ? (
-                  <>
-                    <LightModeIcon className="mr-2" /> Light Mode
-                  </>
-                ) : (
-                  <>
-                    <DarkModeIcon className="mr-2" /> Dark Mode
-                  </>
-                )}
-              </button>
+              <div className="mt-8">
+                <ThemeToggle />
+              </div>
             </div>
           </motion.div>
         )}
