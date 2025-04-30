@@ -1,6 +1,10 @@
 import { Inter } from 'next/font/google';
 import './styles/globals.css';
 import ThemeProvider from './components/ThemeProvider';
+import Navbar from './components/Navbar';
+import AnimatedBackground from './components/AnimatedBackground';
+import ThemeToggle from './components/ThemeToggle';
+import GithubButton from './components/GithubButton';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -44,7 +48,13 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider>
-          {children}
+          <AnimatedBackground />
+          <Navbar />
+          <main className="relative z-10">
+            {children}
+          </main>
+          <ThemeToggle />
+          <GithubButton />
         </ThemeProvider>
       </body>
     </html>
