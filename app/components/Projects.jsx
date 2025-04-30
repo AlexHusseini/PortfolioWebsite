@@ -100,7 +100,12 @@ export default function Projects() {
                   {project.id === 1 ? (
                     <a 
                       href="#" 
-                      onClick={(e) => e.preventDefault()}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                      }}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
                     >
                       <OpenInNewIcon fontSize="small" />
