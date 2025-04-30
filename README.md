@@ -43,6 +43,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-Alexander Husseini - [Your Email]
+Alexander Husseini - alexander.husseini@gmail.com
 
 Project Link: [https://github.com/alexander-husseini/portfoliowebsite](https://github.com/alexander-husseini/portfoliowebsite) 
