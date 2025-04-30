@@ -7,8 +7,19 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import DownloadIcon from '@mui/icons-material/Download';
 import AnimatedBackground from './AnimatedBackground';
+import { useState } from 'react';
 
 export default function Hero() {
+  const [isDownloadDisabled, setIsDownloadDisabled] = useState(false);
+
+  const handleDownloadClick = (e) => {
+    e.preventDefault();
+    setIsDownloadDisabled(true);
+    setTimeout(() => {
+      setIsDownloadDisabled(false);
+    }, 2000);
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden section-padding pt-32">
       <AnimatedBackground />
@@ -39,7 +50,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mb-8"
         >
-          Software Engineering major at Kennesaw State University, Minor in cybersecurity
+          Majoring in Software Engineering with a minor in Cybersecurity at Kennesaw State University
         </motion.p>
         
         <motion.div
@@ -54,9 +65,11 @@ export default function Hero() {
           <a 
             href="/pdf/alexander-husseini-resume.pdf" 
             download
-            className="button button-secondary flex items-center gap-2"
+            onClick={handleDownloadClick}
+            className={`button button-secondary flex items-center gap-2 ${isDownloadDisabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+            disabled={isDownloadDisabled}
           >
-            <DownloadIcon fontSize="small" /> Download Resume
+            <DownloadIcon fontSize="small" /> {isDownloadDisabled ? 'Coming Soon' : 'Download Resume'}
           </a>
         </motion.div>
         
