@@ -16,7 +16,11 @@ const skills = {
     'Responsive Design',
     'UI/UX',
     'Material UI',
-    'Bootstrap'
+    'Bootstrap',
+    'Flutter',
+    'Dart',
+    'Tkinter',
+    'GUI Development'
   ],
   backend: [
     'Python',
@@ -27,10 +31,13 @@ const skills = {
     'MongoDB',
     'RESTful APIs',
     'Firebase',
-    'GraphQL',
     'SQL Databases',
     'Authentication & Authorization',
-    'API Development'
+    'API Development',
+    'SQLite',
+    'PostgreSQL',
+    'GPT API Integration',
+    'User Authentication'
   ],
   tools: [
     'Git / GitHub',
@@ -41,10 +48,9 @@ const skills = {
     'AWS',
     'Agile/Scrum',
     'Figma',
-    'Performance Optimization',
     'Cross-browser Compatibility',
     'Accessibility',
-    'SEO'
+    'Xcode (iOS Testing)'
   ],
 };
 
@@ -86,7 +92,7 @@ export default function Skills() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
-            Skills & Expertise
+            Skills
           </h2>
           <div className="w-24 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mx-auto"></div>
         </div>

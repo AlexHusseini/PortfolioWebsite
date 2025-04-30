@@ -12,6 +12,7 @@ const projects = [
     period: '2025 (In Progress)',
     role: 'Mobile Developer',
     description: 'A cross-platform mobile app developed in collaboration with a partner to help users track workouts, bodyweight, sleep, and overall fitness goals. Built using Flutter, the app stores all data locally through SQLite and provides features like structured workout logging (sets, reps, RIR), a dynamic calendar, and a stats screen to visualize muscle group volume trends.\n\nA standout feature is the AI assistant, powered by a backend hosted on Vercel using serverless functions connected to OpenAI\'s GPT-3.5 Turbo, with a fallback to Hugging Face. The chatbot generates personalized workout plans, offers nutrition feedback, and tracks user progress. The app also integrates with Apple HealthKit and Android Health Connect to automatically sync fitness and health metrics.\n\nWe tested the app on both iOS and Android, using Xcode to ensure compatibility across iOS devices. The project was designed with an offline-first experience, secure local storage, and plans for future premium features and social sharing tools.',
+    skills: ['Flutter', 'Dart', 'SQLite', 'GPT API Integration', 'HealthKit', 'Health Connect', 'Secure Storage', 'Xcode (iOS Testing)', 'Mobile App Development', 'Collaboration'],
     category: 'mobile',
     githubUrl: 'https://github.com/AlexHusseini/liteweight',
     liveUrl: null,
@@ -22,8 +23,9 @@ const projects = [
     period: '2024-2025',
     role: 'Quantitative Developer',
     description: 'A Python-based research program developed to identify high-alpha options contracts by analyzing market structure, volatility, and pricing inefficiencies. The program processes real-time and historical data to surface contracts with the best potential for directional plays in SPX, QQQ, and other major indices.\n\nEngineered custom metrics such as TAS (Time-Adjusted Signal), RA-SAS (Risk-Adjusted Signal Alpha Score), and ER (Expected Return) to quantify trade opportunities. These signals are evaluated across factors like bid/ask slippage, open interest, delta exposure, gamma behavior, and theta decay to rank contracts based on potential alpha per dollar risked.\n\nThe tool supports filtering by DTE ranges, contract liquidity, and volatility skew to prioritize scalable, low-friction setups. Through this project, I deepened my understanding of quantitative modeling, options pricing mechanics, and data-driven signal design.',
+    skills: ['Python', 'NumPy', 'Pandas', 'Data Analysis', 'Financial Modeling', 'Algorithm Design'],
     category: 'quantitative',
-    githubUrl: 'https://github.com/AlexHusseini/alpha-options-tool',
+    githubUrl: 'https://github.com/AlexHusseini/options-alpha-toolkit',
     liveUrl: null,
   },
   {
@@ -32,26 +34,28 @@ const projects = [
     period: '2025',
     role: 'Full Stack Developer',
     description: 'A collaborative desktop application built using Python with a Tkinter GUI and PostgreSQL for data storage. The system was designed to help project teams manage everything from user access to risk tracking and requirements management.\n\nFeatures include secure login and registration with role-based access, project and team management modules, risk tracking with a visual risk matrix, and an effort tracking module that logs development hours across five phases. The application also supports data export in CSV and PDF formats for reporting purposes.\n\nAs the group leader, I coordinated development efforts and personally built core components such as the login/registration system, the interactive risk matrix visualization, the requirements tracking interface, and the export functionalities. I implemented SQL parameterization for security, integrated real-time error handling, and ensured a user-friendly design. The project includes Docker configuration for PostgreSQL and startup scripts to streamline setup on any machine.',
+    skills: ['Python', 'Tkinter', 'PostgreSQL', 'SQL', 'Docker', 'GUI Development', 'Data Export', 'User Authentication', 'Collaboration'],
     category: 'desktop',
-    githubUrl: 'https://github.com/AlexHusseini/project-management-system',
+    githubUrl: 'https://github.com/AlexHusseini/SWEmanagement',
     liveUrl: null,
   },
 ];
 
 export default function Projects() {
   const { ref, inView } = useInView({
-    threshold: 0.1,
+    threshold: 0.01,
     triggerOnce: true,
+    rootMargin: '-100px 0px'
   });
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 1, y: 0 },
     visible: (i) => ({
       opacity: 1,
       y: 0,
       transition: { 
-        duration: 0.5,
-        delay: i * 0.2 
+        duration: 0,
+        delay: 0 
       },
     }),
   };
@@ -66,7 +70,7 @@ export default function Projects() {
           <div className="w-24 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mx-auto"></div>
         </div>
         
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {projects.map((project, index) => (
             <motion.div 
               key={project.id}
@@ -81,8 +85,8 @@ export default function Projects() {
                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.06)",
                 transition: { duration: 0.2, ease: "easeOut" }
               }}
-              className={`bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 md:p-8 relative mb-8 last:mb-0 cursor-pointer ${
-                index % 2 === 0 ? 'md:ml-0 md:mr-16' : 'md:ml-16 md:mr-0'
+              className={`bg-white dark:bg-gray-800 rounded-lg shadow-sm p-8 relative mb-10 last:mb-0 cursor-pointer ${
+                index % 2 === 0 ? 'md:ml-0 md:mr-20' : 'md:ml-20 md:mr-0'
               }`}
               style={{ 
                 transformOrigin: index % 2 === 0 ? 'left center' : 'right center',
@@ -128,6 +132,20 @@ export default function Projects() {
                   {paragraph}
                 </p>
               ))}
+              
+              <div className="mt-6">
+                <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Skills:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {project.skills.map((skill, index) => (
+                    <span 
+                      key={index}
+                      className="px-3 py-1 text-sm bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
