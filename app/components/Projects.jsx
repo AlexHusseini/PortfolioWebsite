@@ -1,260 +1,148 @@
 'use client';
 
-import { useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+
+const projects = [
+  {
+    id: 1,
+    title: 'E-Commerce Platform',
+    description: 'A full-stack e-commerce application with user authentication, product management, shopping cart, and payment processing using Stripe.',
+    image: '/images/project-ecommerce.jpg',
+    tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe API'],
+    githubUrl: 'https://github.com/AlexHusseini/ecommerce-platform',
+    liveUrl: 'https://ecommerce-platform-demo.com',
+  },
+  {
+    id: 2,
+    title: 'Task Management Dashboard',
+    description: 'A responsive task management application with drag-and-drop interface, real-time updates, and team collaboration features.',
+    image: '/images/project-task-manager.jpg',
+    tags: ['React', 'Firebase', 'Redux', 'Material UI', 'React DnD'],
+    githubUrl: 'https://github.com/AlexHusseini/task-management',
+    liveUrl: 'https://task-manager-demo.com',
+  },
+  {
+    id: 3,
+    title: 'Real Estate Listing App',
+    description: 'A property listing platform with search filters, interactive maps, and virtual tour capabilities for real estate agents and buyers.',
+    image: '/images/project-realestate.jpg',
+    tags: ['Next.js', 'Tailwind CSS', 'MongoDB', 'Google Maps API', 'AWS S3'],
+    githubUrl: 'https://github.com/AlexHusseini/realestate-app',
+    liveUrl: 'https://realestate-demo.com',
+  },
+];
 
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState('all');
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
 
-  const projectData = [
-    {
-      id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-featured online shopping platform with user authentication, product management, and payment processing.',
-      image: '/images/projects/ecommerce.jpg',
-      tags: ['React', 'Node.js', 'MongoDB'],
-      category: 'fullstack',
-      github: 'https://github.com',
-      demo: 'https://demo.com',
-    },
-    {
-      id: 2,
-      title: 'Admin Dashboard',
-      description: 'Responsive admin interface with dark mode, data visualization, and role-based access control.',
-      image: '/images/projects/dashboard.jpg',
-      tags: ['React', 'Tailwind CSS', 'Chart.js'],
-      category: 'frontend',
-      github: 'https://github.com',
-      demo: 'https://demo.com',
-    },
-    {
-      id: 3,
-      title: 'Task Management API',
-      description: 'RESTful API for task management with authentication, authorization, and comprehensive documentation.',
-      image: '/images/projects/api.jpg',
-      tags: ['Node.js', 'Express', 'MongoDB'],
-      category: 'backend',
-      github: 'https://github.com',
-    },
-    {
-      id: 4,
-      title: 'Social Media App',
-      description: 'Feature-rich social platform with real-time messaging, post sharing, and user interactions.',
-      image: '/images/projects/social.jpg',
-      tags: ['React', 'Firebase', 'Socket.io'],
-      category: 'fullstack',
-      github: 'https://github.com',
-      demo: 'https://demo.com',
-    },
-  ];
-
-  const categories = [
-    { id: 'all', name: 'All' },
-    { id: 'frontend', name: 'Frontend' },
-    { id: 'backend', name: 'Backend' },
-    { id: 'fullstack', name: 'Full Stack' },
-  ];
-
-  const filteredProjects = projectData.filter(
-    (project) => activeFilter === 'all' || project.category === activeFilter
-  );
-
-  const sectionVariants = {
+  const staggerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.3,
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
-  const headerVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1],
-      }
-    }
-  };
-
-  const filterVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      }
-    }
-  };
-
-  const projectVariants = {
+  const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.5,
-        ease: [0.25, 0.1, 0.25, 1],
-      }
+      transition: { duration: 0.5 },
     },
-    hover: { 
-      y: -10,
-      boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-      transition: { 
-        type: "spring", 
-        stiffness: 300, 
-        damping: 20 
-      } 
-    }
-  };
-
-  const imageVariants = {
-    hover: { 
-      scale: 1.05,
-      transition: { duration: 0.3 }
-    }
-  };
-
-  const buttonVariants = {
-    hover: { 
-      scale: 1.1,
-      transition: { type: "spring", stiffness: 400, damping: 10 }
-    },
-    tap: { scale: 0.95 }
-  };
-
-  const tagVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { 
-      opacity: 1, 
-      scale: 1,
-      transition: { type: "spring", stiffness: 300, damping: 20 }
-    }
   };
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
-      <motion.div 
-        className="container mx-auto px-4"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={sectionVariants}
-      >
-        <motion.div variants={headerVariants} className="text-center mb-12">
-          <motion.h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+    <section id="projects" className="py-20 section-padding">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
             My Projects
-          </motion.h2>
-          <motion.p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            A selection of my recent work showcasing my skills and experience in building
-            web applications and services.
-          </motion.p>
-        </motion.div>
-
-        <motion.div 
-          variants={filterVariants}
-          className="flex flex-wrap justify-center gap-3 mb-12"
-        >
-          {categories.map((category) => (
-            <motion.button
-              key={category.id}
-              onClick={() => setActiveFilter(category.id)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 
-                ${activeFilter === category.id 
-                  ? 'bg-blue-600 text-white' 
-                  : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700'
-                }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {category.name}
-            </motion.button>
-          ))}
-        </motion.div>
-
-        <motion.div 
-          layout
+          </h2>
+          <div className="w-24 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mx-auto"></div>
+        </div>
+        
+        <motion.div
+          ref={ref}
+          variants={staggerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {filteredProjects.map((project) => (
-            <motion.div
-              key={project.id}
-              layout
-              variants={projectVariants}
-              whileHover="hover"
-              className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg"
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
+          {projects.map((project) => (
+            <motion.div 
+              key={project.id} 
+              variants={itemVariants}
+              className="card overflow-hidden group"
             >
-              <div className="relative overflow-hidden h-48">
-                <motion.img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                  variants={imageVariants}
-                  whileHover="hover"
-                />
+              <div className="aspect-video overflow-hidden bg-gray-200 dark:bg-gray-800">
+                <div className="w-full h-full bg-gradient-to-br from-blue-500/20 to-indigo-500/20 dark:from-blue-500/10 dark:to-indigo-500/10 flex items-center justify-center text-gray-400 dark:text-gray-600">
+                  <div className="font-medium">Project Image</div>
+                </div>
               </div>
+              
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">{project.title}</h3>
+                
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, index) => (
-                    <motion.span
-                      key={index}
-                      variants={tagVariants}
-                      className="px-2 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full"
+                    <span 
+                      key={index} 
+                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-xs font-medium"
                     >
                       {tag}
-                    </motion.span>
+                    </span>
                   ))}
                 </div>
-                <div className="flex gap-3">
-                  <motion.a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    variants={buttonVariants}
-                    whileHover="hover"
-                    whileTap="tap"
-                    className="flex items-center gap-1 px-3 py-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                
+                <div className="flex gap-4">
+                  <a 
+                    href={project.githubUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                    aria-label="View source code on GitHub"
                   >
-                    <FaGithub />
-                    <span>Code</span>
-                  </motion.a>
-                  {project.demo && (
-                    <motion.a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      variants={buttonVariants}
-                      whileHover="hover"
-                      whileTap="tap"
-                      className="flex items-center gap-1 px-3 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
-                    >
-                      <FaExternalLinkAlt />
-                      <span>Demo</span>
-                    </motion.a>
-                  )}
+                    <GitHubIcon fontSize="small" /> Code
+                  </a>
+                  <a 
+                    href={project.liveUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                    aria-label="View live demo"
+                  >
+                    <OpenInNewIcon fontSize="small" /> Demo
+                  </a>
                 </div>
               </div>
             </motion.div>
           ))}
         </motion.div>
-      </motion.div>
+        
+        <div className="text-center mt-12">
+          <a 
+            href="https://github.com/AlexHusseini" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="button button-secondary inline-flex items-center gap-2"
+          >
+            <GitHubIcon fontSize="small" /> View More Projects on GitHub
+          </a>
+        </div>
+      </div>
     </section>
   );
 } 
