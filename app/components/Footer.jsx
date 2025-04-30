@@ -4,12 +4,9 @@ import Link from 'next/link';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
-import { useTheme } from './ThemeProvider';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
+import CodeIcon from '@mui/icons-material/Code';
 
 export default function Footer() {
-  const { theme, toggleTheme } = useTheme();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -50,21 +47,15 @@ export default function Footer() {
             </div>
           </div>
           
-          <button 
-            onClick={toggleTheme}
+          <a 
+            href="https://github.com/AlexHusseini/PortfolioWebsite"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            aria-label="Toggle theme"
+            aria-label="View website source code"
           >
-            {theme === 'dark' ? (
-              <>
-                <LightModeIcon fontSize="small" /> Light Mode
-              </>
-            ) : (
-              <>
-                <DarkModeIcon fontSize="small" /> Dark Mode
-              </>
-            )}
-          </button>
+            <CodeIcon fontSize="small" /> Source Code
+          </a>
         </div>
         
         <div className="border-t border-gray-200 dark:border-gray-800 mt-6 pt-6 text-center">

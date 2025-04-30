@@ -3,8 +3,6 @@ import './styles/globals.css';
 import ThemeProvider from './components/ThemeProvider';
 import Navbar from './components/Navbar';
 import AnimatedBackground from './components/AnimatedBackground';
-import ThemeToggle from './components/ThemeToggle';
-import GithubButton from './components/GithubButton';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -53,8 +51,6 @@ export default function RootLayout({ children }) {
           <main className="relative z-10">
             {children}
           </main>
-          <ThemeToggle />
-          <GithubButton />
         </ThemeProvider>
       </body>
     </html>
