@@ -85,11 +85,9 @@ export default function Projects() {
                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.06)",
                 transition: { duration: 0.2, ease: "easeOut" }
               }}
-              className={`bg-white dark:bg-gray-800 rounded-lg shadow-sm p-8 relative mb-10 last:mb-0 cursor-pointer ${
-                index % 2 === 0 ? 'md:ml-0 md:mr-20' : 'md:ml-20 md:mr-0'
-              }`}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-8 relative mb-10 last:mb-0 cursor-pointer"
               style={{ 
-                transformOrigin: index % 2 === 0 ? 'left center' : 'right center',
+                transformOrigin: 'center',
               }}
             >
               <div className="flex items-center justify-between mb-2">

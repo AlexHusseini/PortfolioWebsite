@@ -7,7 +7,7 @@ import LinkIcon from '@mui/icons-material/Link';
 const experiences = [
   {
     id: 1,
-    title: 'Freelance Web Developer',
+    title: 'Lead Full Stack Developer',
     company: 'RS Photographies',
     location: 'Remote',
     period: 'Mar 2025 - Apr 2025',

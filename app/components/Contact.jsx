@@ -57,12 +57,12 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700/50"
               >
-                <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform shrink-0">
                   <LinkedInIcon fontSize="medium" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <div className="font-medium text-lg mb-1">LinkedIn</div>
-                  <span>linkedin.com/in/alexander-husseini-547a10314</span>
+                  <span className="break-all">linkedin.com/in/alexander-husseini-547a10314</span>
                 </div>
               </a>
               
