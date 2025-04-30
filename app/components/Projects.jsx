@@ -75,8 +75,13 @@ export default function Projects() {
               variants={itemVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
-              whileHover={{ scale: 1.03 }}
-              className={`bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 md:p-8 relative mb-8 last:mb-0 cursor-pointer transition-transform ${
+              whileHover={{ 
+                scale: 1.01,
+                y: -2,
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.06)",
+                transition: { duration: 0.2, ease: "easeOut" }
+              }}
+              className={`bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 md:p-8 relative mb-8 last:mb-0 cursor-pointer ${
                 index % 2 === 0 ? 'md:ml-0 md:mr-16' : 'md:ml-16 md:mr-0'
               }`}
               style={{ 

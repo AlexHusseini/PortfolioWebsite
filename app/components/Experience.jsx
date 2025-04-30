@@ -42,14 +42,21 @@ export default function Experience() {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          {experiences.map((exp) => (
+          {experiences.map((exp, index) => (
             <motion.div 
               key={exp.id}
               ref={ref} 
               variants={itemVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 md:p-8 relative"
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ 
+                scale: 1.01,
+                y: -2,
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.06)",
+                transition: { duration: 0.2, ease: "easeOut" }
+              }}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 md:p-8 relative mb-8 last:mb-0 cursor-pointer"
             >
               {exp.website && (
                 <a 
