@@ -80,12 +80,21 @@ export default function Projects() {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               whileHover={{ 
-                scale: 1.01,
-                y: -2,
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.06)",
-                transition: { duration: 0.2, ease: "easeOut" }
+                scale: 1.02,
+                y: -4,
+                boxShadow: "0 8px 16px rgba(0, 0, 0, 0.08)",
+                transition: { 
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20
+                }
               }}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-8 relative mb-10 last:mb-0 cursor-pointer"
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 20
+              }}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-8 relative mb-10 last:mb-0 cursor-pointer hover:shadow-lg"
               style={{ 
                 transformOrigin: 'center',
               }}
