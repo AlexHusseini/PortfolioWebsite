@@ -63,13 +63,11 @@ export default function Hero() {
             View My Work
           </Link>
           <a 
-            href="/pdf/alexander-husseini-resume.pdf" 
-            download
-            onClick={handleDownloadClick}
-            className={`button button-secondary flex items-center gap-2 ${isDownloadDisabled ? 'opacity-50 cursor-not-allowed' : ''}`}
-            disabled={isDownloadDisabled}
+            href="/pdf/Alex_Husseini_Resume.pdf" 
+            download="Alex_Husseini_Resume.pdf"
+            className="button button-secondary flex items-center gap-2"
           >
-            <DownloadIcon fontSize="small" /> {isDownloadDisabled ? 'Coming Soon' : 'Download Resume'}
+            <DownloadIcon fontSize="small" /> Download Resume
           </a>
         </motion.div>
         
