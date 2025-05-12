@@ -19,6 +19,17 @@ const projects = [
   },
   {
     id: 2,
+    title: 'TSMocker – TypeScript Mock Data Generator',
+    period: '2025',
+    role: 'CLI Tool Developer',
+    description: 'A powerful TypeScript-based CLI tool for generating realistic mock data from TypeScript interfaces. TSMocker automatically analyzes TypeScript interfaces and generates appropriate mock data that matches the type structure.\n\nThe tool supports various types including primitive types, complex types (arrays, objects, unions), date objects, and optional properties. It provides multiple output formats (JSON, CSV) and features smart data generation with context-aware string generation for emails, names, and addresses, realistic number ranges, appropriate date formats, and nested object structures.\n\nTSMocker can be installed globally or locally via npm and offers a simple command-line interface with options for specifying the schema file, interface name, number of mock objects, output format, and output file. The tool is built with a modular architecture including a TypeScript interface parser, mock data generator, and CLI entry point, making it extensible and maintainable.',
+    skills: ['TypeScript', 'Node.js', 'CLI Development', 'Type Analysis', 'Code Generation', 'Unit Testing', 'npm Package', 'Data Mocking', 'Developer Tools'],
+    category: 'tool',
+    githubUrl: 'https://github.com/AlexHusseini/tsmocker',
+    liveUrl: null,
+  },
+  {
+    id: 3,
     title: 'Options Alpha Toolkit – Quantitative Options Research Program',
     period: '2024-2025',
     role: 'Quantitative Developer',
@@ -29,7 +40,7 @@ const projects = [
     liveUrl: null,
   },
   {
-    id: 3,
+    id: 4,
     title: 'Project Management System',
     period: '2025',
     role: 'Full Stack Developer',
