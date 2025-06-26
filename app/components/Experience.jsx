@@ -7,6 +7,15 @@ import LinkIcon from '@mui/icons-material/Link';
 const experiences = [
   {
     id: 1,
+    title: 'Software Engineering Intern',
+    company: 'WitnessAI',
+    location: 'Atlanta, GA',
+    period: 'July 2025 – Present',
+    description: 'Working on browser-based JavaScript tools and extensions to extract and analyze structured web data. Debugging complex DOM interactions, implementing REST API calls, and contributing test coverage with automated testing tools. Collaborating in Git-based workflows while writing clean, maintainable code using JavaScript, HTML/CSS, and Chrome DevTools.',
+    website: 'https://witness.ai/'
+  },
+  {
+    id: 2,
     title: 'Lead Full Stack Developer',
     company: 'RS Photographies',
     location: 'Remote',
