@@ -3,6 +3,12 @@
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
+const highlights = [
+  { label: 'Current role', value: 'Software Engineer, WitnessAI' },
+  { label: 'Education', value: 'Software Engineering, KSU' },
+  { label: 'Focus', value: 'Go, TypeScript, product integrations' },
+];
+
 export default function About() {
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -48,26 +54,38 @@ export default function About() {
           <motion.div variants={itemVariants} className="mb-12 text-center">
             <div className="w-24 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mx-auto"></div>
           </motion.div>
+
+          <motion.div variants={itemVariants} className="grid md:grid-cols-3 gap-4 mb-12">
+            {highlights.map((item) => (
+              <div
+                key={item.label}
+                className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm text-center"
+              >
+                <div className="text-xs uppercase tracking-wide text-blue-600 dark:text-blue-400 mb-2">
+                  {item.label}
+                </div>
+                <div className="text-gray-800 dark:text-gray-100 font-semibold">
+                  {item.value}
+                </div>
+              </div>
+            ))}
+          </motion.div>
           
           <motion.div variants={itemVariants} className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed space-y-6">
             <p>
-              I'm Alexander Husseini, a passionate software developer with a strong focus on creating clean, efficient, and user-friendly web applications. With a background in computer science and several years of industry experience, I specialize in building modern web solutions that not only look great but also perform excellently.
+              I&apos;m Alexander Husseini, a software engineer at WitnessAI working on the integrations that power the company&apos;s product suite. I write Go and TypeScript, own test coverage for new work, and care about shipping code that sales and customers can actually rely on.
             </p>
             
             <p>
-              My journey in software development began with a curiosity about how things work, which evolved into a passion for crafting digital experiences that solve real problems. I enjoy the challenge of taking complex requirements and turning them into elegant, intuitive solutions.
+              Before converting to full-time, I interned on browser-based JavaScript tools and Chrome extensions, digging through DOM edge cases, REST APIs, and automated tests. On the side I build full-stack apps, CLI tools, and quantitative research programs, from Flutter and Firebase to Python, PostgreSQL, and Go.
             </p>
             
             <p>
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community. I believe in continuous learning and staying up-to-date with the latest industry trends and best practices.
-            </p>
-            
-            <p>
-              I'm always open to new opportunities and collaborations where I can leverage my skills to create impactful solutions. Feel free to reach out if you'd like to discuss potential projects or just connect!
+              I&apos;m finishing a Software Engineering degree with a Cybersecurity minor at Kennesaw State University. When I&apos;m not at work, I&apos;m usually shipping a side project, learning a new tool, or tightening something I already built.
             </p>
           </motion.div>
         </motion.div>
       </div>
     </section>
   );
-} 
+}

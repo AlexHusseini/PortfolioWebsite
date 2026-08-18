@@ -1,0 +1,13 @@
+{
+  "name": "Alexander Husseini",
+  "short_name": "AH",
+  "description": "Software Engineer at WitnessAI",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#e7d8bd",
+  "theme_color": "#e7d8bd",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

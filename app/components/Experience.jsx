@@ -1,103 +1,84 @@
-'use client';
-
-import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
-import LinkIcon from '@mui/icons-material/Link';
-
-const experiences = [
-  {
-    id: 1,
-    title: 'Software Engineering Intern',
-    company: 'WitnessAI',
-    location: 'Atlanta, GA',
-    period: 'July 2025 – Present',
-    description: 'Working on browser-based JavaScript tools and extensions to extract and analyze structured web data. Debugging complex DOM interactions, implementing REST API calls, and contributing test coverage with automated testing tools. Collaborating in Git-based workflows while writing clean, maintainable code using JavaScript, HTML/CSS, and Chrome DevTools.',
-    website: 'https://witness.ai/'
-  },
-  {
-    id: 2,
-    title: 'Lead Full Stack Developer',
-    company: 'RS Photographies',
-    location: 'Remote',
-    period: 'Mar 2025 - Apr 2025',
-    description: 'Developed a professional, responsive portfolio website for RS Photographies using React.js and Firebase Hosting. Built features including a dynamic photo gallery with category filtering, an About page, contact form, and secure admin panel for photo management. Optimized for performance and mobile compatibility, and deployed at rsphotographies.com.\n\nTechnologies: React.js, Firebase (Firestore, Auth, Storage, Hosting, Functions), JavaScript, CSS3, Git, Nodemailer, Jest',
-    website: 'https://www.rsphotographies.com/'
-  }
-];
-
 export default function Experience() {
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-  };
-
   return (
-    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-900/50 section-padding">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
-            Experience
-          </h2>
-          <div className="w-24 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mx-auto"></div>
+    <section className="band" id="experience">
+      <div className="rule rv">
+        <span className="eyebrow">01</span>
+        <h2>Experience</h2>
+      </div>
+
+      <div className="cards">
+      <article className="slab rv">
+        <div className="slab-head">
+          <h3>Software Engineer</h3>
+          <span className="when">Aug 2025 — Present</span>
         </div>
-        
-        <div className="max-w-4xl mx-auto">
-          {experiences.map((exp, index) => (
-            <motion.div 
-              key={exp.id}
-              ref={ref} 
-              variants={itemVariants}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ 
-                scale: 1.01,
-                y: -2,
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.06)",
-                transition: { duration: 0.2, ease: "easeOut" }
-              }}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 md:p-8 relative mb-8 last:mb-0 cursor-pointer"
-            >
-              {exp.website && (
-                <a 
-                  href={exp.website} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="absolute top-6 right-6 flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline"
-                >
-                  <LinkIcon fontSize="small" />
-                  <span>Visit Website</span>
-                </a>
-              )}
-              
-              <span className="text-sm font-medium text-blue-600 dark:text-blue-400 block mb-2">
-                {exp.period}
-              </span>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-800 dark:text-white mb-2 pr-32">
-                {exp.title}
-              </h3>
-              <div className="text-gray-600 dark:text-gray-300 font-medium mb-4">
-                {exp.company} • {exp.location}
-              </div>
-              
-              {exp.description.split('\n\n').map((paragraph, index) => (
-                <p key={index} className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4 last:mb-0">
-                  {paragraph}
-                </p>
-              ))}
-            </motion.div>
-          ))}
+        <p className="org">
+          <a href="https://witness.ai/">WitnessAI</a>
+        </p>
+        <div className="tags">
+          <span className="tag">Go</span>
+          <span className="tag">Rust</span>
+          <span className="tag">Python</span>
+          <span className="tag">TypeScript</span>
+          <span className="tag">React</span>
+          <span className="tag">Harness</span>
+          <span className="tag">Docker</span>
+          <span className="tag">Git</span>
         </div>
+        <p>
+          Develop and maintain the Go and Rust proxy integrations behind the network layer of WitnessAI&apos;s enterprise GenAI security platform — the proxy-layer work that keeps communication between enterprise environments and generative AI applications secure.
+        </p>
+        <p>
+          Build and maintain Git-based CI/CD workflows in Harness for versioning, building, and deploying changes, and use Docker to manage containerized database and in-memory service dependencies for local development and testing.
+        </p>
+        <p>
+          Work directly with enterprise customers to troubleshoot integration behavior, pin down technical requirements, and ship production solutions.
+        </p>
+      </article>
+
+      <article className="slab rv">
+        <div className="slab-head">
+          <h3>Software Engineering Intern</h3>
+          <span className="when">Jul 2025 — Aug 2025</span>
+        </div>
+        <p className="org">
+          <a href="https://witness.ai/">WitnessAI</a>
+        </p>
+        <div className="tags">
+          <span className="tag">TypeScript</span>
+          <span className="tag">React</span>
+          <span className="tag">Node.js</span>
+          <span className="tag">Chrome DevTools</span>
+          <span className="tag">Git</span>
+        </div>
+        <p>
+          Developed TypeScript and React integrations for web applications that detect and protect sensitive information submitted to generative AI services, building application-specific browser integrations from React props, DOM state, and web events across supported platforms.
+        </p>
+        <p>
+          Debugged DOM interactions and UI rendering in Chrome DevTools to resolve browser integration and data-extraction failures, and contributed TypeScript features to a Node.js traffic analysis platform through Git-based code review.
+        </p>
+      </article>
+
+      <article className="slab rv">
+        <div className="slab-head">
+          <h3>Lead Full Stack Developer</h3>
+          <span className="when">Mar 2025 — Apr 2025</span>
+        </div>
+        <p className="org">
+          <a href="https://www.rsphotographies.com/">RS Photographies</a> · Remote
+        </p>
+        <div className="tags">
+          <span className="tag">React</span>
+          <span className="tag">Firebase</span>
+          <span className="tag">Firestore</span>
+          <span className="tag">Nodemailer</span>
+          <span className="tag">Jest</span>
+        </div>
+        <p>
+          Designed and shipped a responsive portfolio site for a working photographer: filterable gallery, contact form, and a secure admin panel for uploading and organizing photos. Built on React and Firebase, tuned for mobile, live at rsphotographies.com.
+        </p>
+      </article>
       </div>
     </section>
   );
-} 
+}
